@@ -36,6 +36,18 @@ public class Worm implements Collidable, Iterable<Point>{
 	}
 	
 	public void setDirection(Direction d) {
+		setDirection(d, false);
+	}
+	
+	public void setDirection(Direction d, boolean check) {
+		if (check && points.size() > 1) {
+			if (Math.abs(d.getX()) > 0 && d.getX()*-1 == direction.getX()) {
+				return;
+			}
+			if (Math.abs(d.getY()) > 0 && d.getY()*-1 == direction.getY()) {
+				return;
+			}
+		}
 		direction = d;
 	}
 	

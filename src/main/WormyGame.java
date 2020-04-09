@@ -99,7 +99,7 @@ public class WormyGame extends JPanel implements ActionListener{
 	
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				worm.setDirection(new Direction(0,-1));
+				worm.setDirection(new Direction(0,-1), true);
 				onKeyPress();
 			}
 		};
@@ -108,7 +108,7 @@ public class WormyGame extends JPanel implements ActionListener{
 	
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				worm.setDirection(new Direction(0,1));
+				worm.setDirection(new Direction(0,1), true);
 				onKeyPress();
 			}
 		};
@@ -117,7 +117,7 @@ public class WormyGame extends JPanel implements ActionListener{
 	
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				worm.setDirection(new Direction(-1,0));
+				worm.setDirection(new Direction(-1,0), true);
 				onKeyPress();
 			}
 		};
@@ -126,7 +126,7 @@ public class WormyGame extends JPanel implements ActionListener{
 	
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				worm.setDirection(new Direction(1,0));
+				worm.setDirection(new Direction(1,0), true);
 				onKeyPress();
 			}
 		};
